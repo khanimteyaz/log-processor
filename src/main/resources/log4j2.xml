@@ -9,6 +9,8 @@
     <Appenders>
         <Http name="Http" url="http://localhost:9090/log" method="POST" ignoreExceptions="false">
             <Property name="X-Java-Runtime" value="$${java:runtime}" />
+            <Property name="customer" value="cust1" />
+            <Property name="app" value="dummy" />
             <!--<JsonLayout properties="false"/>-->
             <PatternLayout>
                 <Pattern>${LOG_PATTERN}</Pattern>
